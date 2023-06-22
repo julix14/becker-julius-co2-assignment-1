@@ -1,0 +1,30 @@
+body {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+table {
+  width: 100%;
+}
+
+th.col1,
+th.col3 {
+  width: 20%;
+}
+
+th.col2 {
+  width: 60%;
+}
+
+table,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table td + td {
+  border-left: 1px solid black;
+}
+
+table tr:nth-of-type(odd) {
+  background-color: #ebeae8;
+}

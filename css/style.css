@@ -1,0 +1,28 @@
+body {
+  font-family: "Space Mono", monospace, sans-serif;
+  background-color: #fcfaf9;
+  color: #171a21;
+}
+
+header {
+  display: flex;
+  padding: 2rem 0rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0rem;
+}
+
+footer a {
+  color: #171a21;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 3rem;
+}
