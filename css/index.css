@@ -1,11 +1,9 @@
 .content-block {
-  border: 1px solid #171a21;
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
   max-width: 90rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.3s;
 }
 
@@ -14,18 +12,16 @@
   padding: 2rem;
 }
 
-.content-block:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
 .content-block img {
   width: 30rem;
 }
 
 @keyframes slidein {
   0% {
-    top: -400px;
+    top: -500px;
     opacity: 0;
   }
+
   100% {
     opacity: 1;
     top: 0px;
@@ -37,30 +33,28 @@
     opacity: 1;
   }
   100% {
-    top: -400px;
+    top: 500px;
     opacity: 0;
   }
 }
-body {
-  user-select: none;
-}
-body #scene {
+
+#carousel {
   display: flex;
   align-items: center;
   justify-content: left;
   width: 1000px;
-  height: 400px;
-  position: absolute;
+  height: 500px;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-
+  background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
-body #scene #left-zone {
+#carousel #left-zone {
   background: #fff;
   height: 75%;
   flex-grow: 0;
@@ -69,7 +63,7 @@ body #scene #left-zone {
   align-items: center;
   justify-content: left;
 }
-body #scene #left-zone .list {
+body #carousel #left-zone .list {
   display: flex;
   list-style: none;
   align-content: stretch;
@@ -78,31 +72,31 @@ body #scene #left-zone .list {
   margin: 0;
   padding: 0;
 }
-body #scene #left-zone .list li.item input[type="radio"] {
+.carousel-menu {
   display: none;
 }
-body #scene #left-zone .list li.item input[type="radio"] ~ label {
+
+.carousel-menu ~ label {
   display: block;
   opacity: 0.5;
   height: 50px;
   text-align: center;
   line-height: 50px;
 }
-body #scene #left-zone .list li.item input[type="radio"] ~ label:first-letter {
-  text-transform: uppercase;
-}
-body #scene #left-zone .list li.item input[type="radio"] ~ label:hover {
+
+.carousel-menu ~ label:hover {
   opacity: 0.75;
   cursor: pointer;
+  color: #171a21;
 }
 
-body #scene #left-zone .list li.item input[type="radio"] ~ .content {
+.carousel-menu ~ .content {
   position: absolute;
   left: 350px;
-  top: -400px;
+  top: -500px;
   width: 650px;
-  height: 400px;
-  animation-duration: 0.75s;
+  height: 500px;
+  animation-duration: 0.5s;
   animation-name: slideout;
   animation-timing-function: ease-out;
   display: flex;
@@ -110,47 +104,48 @@ body #scene #left-zone .list li.item input[type="radio"] ~ .content {
   justify-content: center;
   flex-direction: column;
 }
-body #scene #left-zone .list li.item input[type="radio"] ~ .content p {
+
+.carousel-menu ~ .content p {
   max-width: 50%;
   text-align: center;
 }
-body #scene #left-zone .list li.item input[type="radio"]:checked ~ label {
+
+.carousel-menu:checked ~ label {
   opacity: 1;
   animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
+
 #radio_healthcare:checked ~ label.label_healthcare {
-  color: #d64541;
-  border-right: solid 4px #d64541;
-}
-#radio_finance:checked ~ label.label_finance {
-  color: #f5d76e;
-  border-right: solid 4px #f5d76e;
-}
-body
-  #scene
-  #left-zone
-  .list
-  li.item
-  input[type="radio"]:checked
-  ~ label.label_transportation {
-  color: #00b16a;
-  border-right: solid 4px #00b16a;
+  color: #bf2239;
+  border-right: solid 4px #bf2239;
 }
 
-body #scene #left-zone .list li.item input[type="radio"]:checked ~ .content {
-  animation-duration: 0.75s;
+#radio_finance:checked ~ label.label_finance {
+  color: #3075d6;
+  border-right: solid 4px #3075d6;
+}
+
+.carousel-menu:checked ~ label.label_transportation {
+  color: #3c896d;
+  border-right: solid 4px #3c896d;
+}
+
+.carousel-menu:checked ~ .content {
+  animation-duration: 0.65s;
   animation-name: slidein;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-body #scene #middle-border {
+
+body #carousel #middle-border {
   background-color: #eee;
   height: 75%;
   flex-grow: 1;
   max-width: 2px;
   z-index: 0;
 }
-body #scene #right-zone {
+
+body #carousel #right-zone {
   background: #fff;
   height: 100%;
   flex-grow: 3;
