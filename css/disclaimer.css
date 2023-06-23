@@ -1,5 +1,6 @@
-table {
-  width: 100%;
+table,
+p {
+  width: 1000px;
 }
 
 th.col1,
