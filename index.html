@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Artificial Intelligence - Home</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700"
@@ -15,21 +16,87 @@
       <h1>Artificial Intelligence</h1>
       <button>Switch</button>
     </header>
-    <div id="info-content">
-      <div id="intro-to-ai" class="contentblock">
-        <h3>AI: Unleashing the Power of Intelligent Machines</h3>
-        <p>
-          In today's fast-paced world, Artificial Intelligence (AI) has emerged
-          as a game-changing technology that empowers machines to mimic human
-          intelligence. AI encompasses various techniques and algorithms that
-          enable computers to learn, reason, and make decisions like humans.
-          Whether it's speech recognition, image processing, or problem-solving,
-          AI has revolutionized numerous fields, shaping the future of
-          technology.
-        </p>
-        <img src="./img/introduction.png" />
-      </div>
-    </div>
+    <main>
+      <section id="carousel">
+        <div id="left-zone">
+          <ul class="list">
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_healthcare"
+                name="basic_carousel"
+                value="Healthcare"
+                checked="checked"
+                class="carousel-menu"
+              /><label class="label_healthcare" for="radio_healthcare"
+                >Healthcare</label
+              >
+              <div class="content content_healthcare">
+                <span class="picto"></span>
+                <h2>Healthcare</h2>
+                <p>
+                  In healthcare, AI is revolutionizing the diagnosis and
+                  treatment of diseases. From medical imaging analysis to
+                  predictive modeling for personalized medicine, AI algorithms
+                  analyze vast amounts of patient data, assisting doctors in
+                  accurate diagnoses, optimizing treatment plans, and even
+                  predicting potential health risks.
+                </p>
+              </div>
+            </li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_finance"
+                name="basic_carousel"
+                value="Finance"
+                checked="checked"
+                class="carousel-menu"
+              /><label class="label_finance" for="radio_finance">Finance</label>
+              <div class="content content_finance">
+                <span class="picto"></span>
+                <h2>Finance</h2>
+                <p>
+                  In the realm of finance, AI algorithms enable advanced data
+                  analysis, risk assessment, and fraud detection. Machine
+                  learning models process vast amounts of financial data,
+                  spotting patterns, predicting market trends, and assisting
+                  financial institutions in making informed decisions.
+                  AI-powered chatbots are also transforming customer service,
+                  providing personalized recommendations and assistance.
+                </p>
+              </div>
+            </li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_transportation"
+                name="basic_carousel"
+                value="Transportation"
+                checked="checked"
+                class="carousel-menu"
+              /><label class="label_transportation" for="radio_transportation"
+                >Transportation</label
+              >
+              <div class="content content_transportation">
+                <span class="picto"></span>
+                <h2>Transportation</h2>
+                <p>
+                  AI is driving innovation in transportation, with self-driving
+                  cars, drones, and smart traffic management systems. Machine
+                  learning algorithms enhance navigation systems, analyze
+                  traffic patterns, and optimize routes, leading to improved
+                  safety, reduced congestion, and increased efficiency in
+                  transportation networks.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="middle-border"></div>
+        <div id="right-zone"></div>
+      </section>
+    </main>
     <footer>
       <a href="disclaimer.html">Disclaimer</a>
     </footer>
