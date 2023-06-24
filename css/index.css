@@ -216,3 +216,30 @@ body .carousel #right-zone {
 #darkmode-toggle-label:active:after {
   width: 260px;
 }
+
+#darkmode-toggle-label img {
+  position: absolute;
+  width: 120px;
+  top: 40px;
+  z-index: 100;
+}
+
+#darkmode-toggle-label img#sun {
+  left: 40px;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+#darkmode-toggle-label img#moon {
+  left: 340px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
+#darkmode-toggle:checked + #darkmode-toggle-label img#sun {
+  fill: #7e7e7e;
+}
+
+#darkmode-toggle:checked + #darkmode-toggle-label img#moon {
+  fill: #fff;
+}
