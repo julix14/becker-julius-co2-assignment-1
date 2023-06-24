@@ -171,66 +171,48 @@ body .carousel #right-zone {
   text-align: center;
 }
 
-.image-toggle {
+#darkmode-toggle-label {
   position: relative;
-  width: 60px;
-}
-.image-toggle .well {
+  width: 500px;
+  height: 200px;
   display: block;
-  background: #eee;
-  height: 20px;
-  border-radius: 10px;
+  background-color: #fff;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
+  transition: 0.3s;
 }
-.image-toggle .toggle {
-  opacity: 0;
-  border: 0;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  background: transparent;
-  position: absolute;
-  cursor: pointer;
-  z-index: 100;
-}
-.iamge-toggle .toggle ~ .darkmode:before {
-  content: "\01F431";
-  position: absolute;
-  left: 0;
-  top: -15px;
-  font-size: 40px;
-  transition: 0.2s;
-}
-.image-toggle .toggle:checked ~ .darkmode:before {
-  left: 100%;
-  margin-left: -1em;
-}
-.image-toggle .toggle ~ label {
-  white-space: nowrap;
-}
-.image-toggle .toggle ~ label:before {
-  position: absolute;
-  right: 100%;
-  margin-right: 5px;
-  top: 0;
-}
-.image-toggle .toggle ~ label:after {
-  position: absolute;
-  left: 100%;
-  margin-left: 5px;
-  top: 0;
-}
-.dark-mode-switch .toggle ~ .darkmode:before {
+
+#darkmode-toggle-label:after {
   content: "";
-  background-image: "./img/moon.svg";
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
 }
-.dark-mode-switch .toggle:checked ~ .darkmode:before {
-  content: "";
-  background-image: url("./img/sun.svg");
+
+#darkmode-toggle {
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
-.dark-mode-switch .toggle ~ label:before {
-  content: "Light";
+
+#darkmode-toggle:checked + #darkmode-toggle-label {
+  background-color: #242424;
 }
-.dark-mode-switch .toggle ~ label:after {
-  content: "Dark";
+
+#darkmode-toggle:checked + #darkmode-toggle-label:after {
+  left: 490px;
+  transform: translate(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+#darkmode-toggle-label:active:after {
+  width: 260px;
 }
