@@ -17,17 +17,35 @@
       <button>Switch</button>
     </header>
     <main>
-      <section id="carousel">
+      <section id="introduction">
+        <div id="intro-to-ai" class="content-block">
+          <div>
+            <h2>AI: Unleashing the Power of Intelligent Machines</h2>
+            <p>
+              In today's fast-paced world, Artificial Intelligence (AI) has
+              emerged as a game-changing technology that empowers machines to
+              mimic human intelligence. AI encompasses various techniques and
+              algorithms that enable computers to learn, reason, and make
+              decisions like humans. Whether it's speech recognition, image
+              processing, or problem-solving, AI has revolutionized numerous
+              fields, shaping the future of technology.
+            </p>
+          </div>
+          <img src="./img/introduction.jpeg" />
+        </div>
+      </section>
+      <h2 class="content-headline">AI-Domains</h2>
+      <section class="carousel">
         <div id="left-zone">
           <ul class="list">
             <li class="item">
               <input
                 type="radio"
                 id="radio_healthcare"
-                name="basic_carousel"
+                name="carousel1"
                 value="Healthcare"
-                checked="checked"
-                class="carousel-menu"
+                class="carousel-menu1"
+                checked
               /><label class="label_healthcare" for="radio_healthcare"
                 >Healthcare</label
               >
@@ -48,10 +66,9 @@
               <input
                 type="radio"
                 id="radio_finance"
-                name="basic_carousel"
+                name="carousel1"
                 value="Finance"
-                checked="checked"
-                class="carousel-menu"
+                class="carousel-menu1"
               /><label class="label_finance" for="radio_finance">Finance</label>
               <div class="content content_finance">
                 <span class="picto"></span>
@@ -71,10 +88,9 @@
               <input
                 type="radio"
                 id="radio_transportation"
-                name="basic_carousel"
+                name="carousel1"
                 value="Transportation"
-                checked="checked"
-                class="carousel-menu"
+                class="carousel-menu1"
               /><label class="label_transportation" for="radio_transportation"
                 >Transportation</label
               >
@@ -88,6 +104,59 @@
                   traffic patterns, and optimize routes, leading to improved
                   safety, reduced congestion, and increased efficiency in
                   transportation networks.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="middle-border"></div>
+        <div id="right-zone"></div>
+      </section>
+      <h2 class="content-headline">Possible Use-Cases</h2>
+      <section class="carousel" id="bonus-content">
+        <div id="left-zone">
+          <ul class="list">
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_entertainment"
+                name="carousel2"
+                value="Entertainment"
+                class="carousel-menu2"
+                checked
+              /><label class="label_entertainment" for="radio_entertainment"
+                >Entertainment</label
+              >
+              <div class="content content_entertainment">
+                <span class="picto"></span>
+                <h2>AI in Entertainment</h2>
+                <p>
+                  AI reshapes entertainment through immersive experiences and
+                  personalized content. Machine learning analyzes user
+                  preferences, recommending tailored content. VR and AR
+                  transform gaming, film, and interactive experiences,
+                  transporting audiences to new realms.
+                </p>
+              </div>
+            </li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_agriculture"
+                name="carousel2"
+                value="Agriculture"
+                class="carousel-menu2"
+              /><label class="label_agriculture" for="radio_agriculture"
+                >Agriculture</label
+              >
+              <div class="content content_agriculture">
+                <span class="picto"></span>
+                <h2>AI for Sustainable Agriculture</h2>
+                <p>
+                  AI revolutionizes agriculture with autonomous equipment,
+                  precision monitoring, and data analysis. It empowers farmers
+                  to make data-driven decisions, optimize resources, and
+                  increase yields while minimizing environmental impact
                 </p>
               </div>
             </li>
