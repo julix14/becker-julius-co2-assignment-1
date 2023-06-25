@@ -65,13 +65,11 @@
   margin: 0;
   padding: 0;
 }
-.carousel-menu1,
-.carousel-menu2 {
+.carousel-menu {
   display: none;
 }
 
-.carousel-menu1 ~ label,
-.carousel-menu2 ~ label {
+.carousel-menu ~ label {
   display: block;
   opacity: 0.5;
   height: 50px;
@@ -79,15 +77,13 @@
   line-height: 50px;
 }
 
-.carousel-menu1 ~ label:hover,
-.carousel-menu2 ~ label:hover {
+.carousel-menu ~ label:hover {
   opacity: 0.75;
   cursor: pointer;
   color: #171a21;
 }
 
-.carousel-menu1 ~ .content,
-.carousel-menu2 ~ .content {
+.carousel-menu ~ .content {
   position: absolute;
   left: 350px;
   top: -500px;
@@ -102,35 +98,35 @@
   flex-direction: column;
 }
 
-.carousel-menu1 ~ .content p,
-.carousel-menu2 ~ .content p {
+.carousel-menu ~ .content p {
   max-width: 50%;
   text-align: center;
 }
 
-.carousel-menu1:checked ~ label,
-.carousel-menu2:checked ~ label {
+.carousel-menu:checked ~ label {
   opacity: 1;
   animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-#radio_healthcare:checked ~ label.label_healthcare {
+.carousel-menu:checked ~ label.label_healthcare,
+.carousel-menu:checked ~ label.label_entertainment {
   color: #bf2239;
   border-right: solid 4px #bf2239;
 }
 
-#radio_finance:checked ~ label.label_finance {
+.carousel-menu:checked ~ label.label_finance,
+.carousel-menu:checked ~ label.label_customersupport {
   color: #3075d6;
   border-right: solid 4px #3075d6;
 }
 
-.carousel-menu1:checked ~ label.label_transportation {
+.carousel-menu:checked ~ label.label_transportation,
+.carousel-menu:checked ~ label.label_agriculture {
   color: #3c896d;
   border-right: solid 4px #3c896d;
 }
 
-.carousel-menu1:checked ~ .content,
-.carousel-menu2:checked ~ .content {
+.carousel-menu:checked ~ .content {
   animation-duration: 0.65s;
   animation-name: slidein;
   animation-fill-mode: forwards;
@@ -149,16 +145,6 @@ body .carousel .right-zone {
   background: #fff;
   height: 100%;
   flex-grow: 3;
-}
-
-.carousel-menu2:checked ~ label.label_agriculture {
-  color: #3c896d;
-  border-right: solid 4px #3c896d;
-}
-
-.carousel-menu2:checked ~ label.label_entertainment {
-  color: #bf2239;
-  border-right: solid 4px #bf2239;
 }
 
 .content-headline {
