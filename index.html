@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Artificial Intelligence - Home</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link id="stylesheet1" rel="stylesheet" href="css/style.css" />
+    <link id="stylesheet2" rel="stylesheet" href="css/index.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700"
@@ -14,7 +14,13 @@
     <header>
       <div>&nbsp;</div>
       <h1>Artificial Intelligence</h1>
-      <button>Switch</button>
+      <div id="darkmode-toggle-button">
+        <input type="checkbox" id="darkmode-toggle" />
+        <label for="darkmode-toggle" id="darkmode-toggle-label">
+          <img src="./img/sun.svg" alt="sun" id="sun" />
+          <img src="./img/moon.svg" alt="moon" id="moon" />
+        </label>
+      </div>
     </header>
     <main>
       <section id="introduction">
@@ -36,7 +42,7 @@
       </section>
       <h2 class="content-headline">AI-Domains</h2>
       <section class="carousel">
-        <div id="left-zone">
+        <div class="left-zone">
           <ul class="list">
             <li class="item">
               <input
@@ -109,12 +115,12 @@
             </li>
           </ul>
         </div>
-        <div id="middle-border"></div>
-        <div id="right-zone"></div>
+        <div class="middle-border"></div>
+        <div class="right-zone"></div>
       </section>
       <h2 class="content-headline">Possible Use-Cases</h2>
       <section class="carousel" id="bonus-content">
-        <div id="left-zone">
+        <div class="left-zone">
           <ul class="list">
             <li class="item">
               <input
@@ -162,12 +168,13 @@
             </li>
           </ul>
         </div>
-        <div id="middle-border"></div>
-        <div id="right-zone"></div>
+        <div class="middle-border"></div>
+        <div class="right-zone"></div>
       </section>
     </main>
     <footer>
       <a href="disclaimer.html">Disclaimer</a>
     </footer>
   </body>
+  <script src="./js/index.js"></script>
 </html>
