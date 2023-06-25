@@ -6,6 +6,11 @@
   font-size: 1.6rem;
 }
 
+#introduction p {
+  line-height: 2;
+  margin-bottom: 3rem;
+}
+
 /* Carousel */
 @keyframes slidein {
   0% {
@@ -160,14 +165,6 @@ body .carousel .right-zone {
   text-decoration: underline;
   font-size: 1.2rem;
 }
-#agriculture_icon {
-  height: 100px;
-  width: 100px;
-  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/83067-200.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 /* Actions Buttons */
 #actions {
@@ -189,7 +186,7 @@ body .carousel .right-zone {
   height: 260px;
   transition: 0.35s;
   cursor: pointer;
-  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 #benefits {
@@ -231,8 +228,4 @@ body .carousel .right-zone {
 
 #actions h2 {
   text-align: center;
-}
-
-a {
-  text-decoration: none;
 }

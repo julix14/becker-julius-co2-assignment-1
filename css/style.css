@@ -49,6 +49,10 @@ header h1 {
   justify-self: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .home-button {
   grid-area: home;
   justify-self: center;
