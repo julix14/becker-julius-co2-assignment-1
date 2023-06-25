@@ -169,11 +169,6 @@ body .carousel .right-zone {
   background-repeat: no-repeat;
 }
 
-.material-symbols-outlined {
-  font-size: 3.5rem !important;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-}
-
 /* Actions Buttons */
 #actions {
   height: 480px;
