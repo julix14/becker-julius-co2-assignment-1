@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
   </head>
   <body>
     <header>
@@ -24,21 +28,175 @@
     </header>
     <main>
       <section id="introduction">
-        <div id="intro-to-ai" class="content-block">
-          <div>
-            <h2>AI: Unleashing the Power of Intelligent Machines</h2>
-            <p>
-              In today's fast-paced world, Artificial Intelligence (AI) has
-              emerged as a game-changing technology that empowers machines to
-              mimic human intelligence. AI encompasses various techniques and
-              algorithms that enable computers to learn, reason, and make
-              decisions like humans. Whether it's speech recognition, image
-              processing, or problem-solving, AI has revolutionized numerous
-              fields, shaping the future of technology.
-            </p>
-          </div>
-          <img src="./img/introduction.jpeg" />
+        <h2>AI: Unleashing the Power of Intelligent Machines</h2>
+        <p>
+          In today's fast-paced world, Artificial Intelligence (AI) has emerged
+          as a game-changing technology that empowers machines to mimic human
+          intelligence. AI encompasses various techniques and algorithms that
+          enable computers to learn, reason, and make decisions like humans.
+          Whether it's speech recognition, image processing, or problem-solving,
+          AI has revolutionized numerous fields, shaping the future of
+          technology.
+        </p>
+      </section>
+      <section class="carousel">
+        <div class="left-zone">
+          <ul class="list">
+            <li class="list-headline">AI Domains</li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_healthcare"
+                name="carousel"
+                value="Healthcare"
+                class="carousel-menu"
+                checked
+              /><label class="label_healthcare" for="radio_healthcare"
+                >Healthcare</label
+              >
+              <div class="content content_healthcare">
+                <span class="material-symbols-outlined" id="healthcare-icon"
+                  >health_and_safety</span
+                >
+                <h2>Healthcare</h2>
+                <p>
+                  In healthcare, AI is revolutionizing the diagnosis and
+                  treatment of diseases. From medical imaging analysis to
+                  predictive modeling for personalized medicine, AI algorithms
+                  analyze vast amounts of patient data, assisting doctors in
+                  accurate diagnoses, optimizing treatment plans, and even
+                  predicting potential health risks.
+                </p>
+              </div>
+            </li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_finance"
+                name="carousel"
+                value="Finance"
+                class="carousel-menu"
+              /><label class="label_finance" for="radio_finance">Finance</label>
+              <div class="content content_finance">
+                <span class="material-symbols-outlined" id="finance-icon"
+                  >payments</span
+                >
+                <h2>Finance</h2>
+                <p>
+                  In the realm of finance, AI algorithms enable advanced data
+                  analysis, risk assessment, and fraud detection. Machine
+                  learning models process vast amounts of financial data,
+                  spotting patterns, predicting market trends, and assisting
+                  financial institutions in making informed decisions.
+                  AI-powered chatbots are also transforming customer service,
+                  providing personalized recommendations and assistance.
+                </p>
+              </div>
+            </li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_transportation"
+                name="carousel"
+                value="Transportation"
+                class="carousel-menu"
+              /><label class="label_transportation" for="radio_transportation"
+                >Transportation</label
+              >
+              <div class="content content_transportation">
+                <span class="material-symbols-outlined" id="transportation-icon"
+                  >local_shipping</span
+                >
+                <h2>Transportation</h2>
+                <p>
+                  AI is driving innovation in transportation, with self-driving
+                  cars, drones, and smart traffic management systems. Machine
+                  learning algorithms enhance navigation systems, analyze
+                  traffic patterns, and optimize routes, leading to improved
+                  safety, reduced congestion, and increased efficiency in
+                  transportation networks.
+                </p>
+              </div>
+            </li>
+            <li class="list-headline">Possible Use-Cases</li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_entertainment"
+                name="carousel"
+                value="Entertainment"
+                class="carousel-menu"
+              /><label class="label_entertainment" for="radio_entertainment"
+                >Entertainment</label
+              >
+              <div class="content content_entertainment">
+                <span class="material-symbols-outlined" id="entertainment-icon"
+                  >sports_esports</span
+                >
+                <h2>AI in Entertainment</h2>
+                <p>
+                  AI reshapes entertainment through immersive experiences and
+                  personalized content. Machine learning analyzes user
+                  preferences, recommending tailored content. VR and AR
+                  transform gaming, film, and interactive experiences,
+                  transporting audiences to new realms.
+                </p>
+              </div>
+            </li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_customersupport"
+                name="carousel"
+                value="Customer Support"
+                class="carousel-menu"
+              /><label class="label_customersupport" for="radio_customersupport"
+                >Customer Support</label
+              >
+              <div class="content content_customersupport">
+                <span
+                  class="material-symbols-outlined"
+                  id="customersupport-icon"
+                  >support_agent</span
+                >
+                <h2>AI for Customer Support</h2>
+                <p>
+                  AI revolutionizes customer service with intelligent chatbots
+                  and virtual assistants. Instant support, personalized
+                  responses, and 24/7 availability enhance experiences, improve
+                  response times, and foster satisfaction. AI understands
+                  context, learns from interactions, empowering businesses to
+                  optimize support while maximizing resources.
+                </p>
+              </div>
+            </li>
+            <li class="item">
+              <input
+                type="radio"
+                id="radio_agriculture"
+                name="carousel"
+                value="Agriculture"
+                class="carousel-menu"
+              /><label class="label_agriculture" for="radio_agriculture"
+                >Agriculture</label
+              >
+              <div class="content content_agriculture">
+                <span class="material-symbols-outlined" id="agriculture-icon"
+                  >agriculture</span
+                >
+                <h2>AI for Sustainable Agriculture</h2>
+                <p>
+                  AI revolutionizes agriculture with autonomous equipment,
+                  precision monitoring, and data analysis. It empowers farmers
+                  to make data-driven decisions, optimize resources, and
+                  increase yields while minimizing environmental impact.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
+        <div class="middle-border"></div>
+        <div class="right-zone"></div>
       </section>
       <section id="actions">
         <h2>Further Informtation</h2>
@@ -58,169 +216,38 @@
             </div>
           </a>
           <a href="#">
-          <div class="action-button" id="risks">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="48"
-              viewBox="0 -960 960 960"
-              width="48"
-              id="risks_icon"
-            >
-              <path
-                d="M479.982-280q14.018 0 23.518-9.482 9.5-9.483 9.5-23.5 0-14.018-9.482-23.518-9.483-9.5-23.5-9.5-14.018 0-23.518 9.482-9.5 9.483-9.5 23.5 0 14.018 9.482 23.518 9.483 9.5 23.5 9.5ZM453-433h60v-253h-60v253Zm27.266 353q-82.734 0-155.5-31.5t-127.266-86q-54.5-54.5-86-127.341Q80-397.681 80-480.5q0-82.819 31.5-155.659Q143-709 197.5-763t127.341-85.5Q397.681-880 480.5-880q82.819 0 155.659 31.5Q709-817 763-763t85.5 127Q880-563 880-480.266q0 82.734-31.5 155.5T763-197.684q-54 54.316-127 86Q563-80 480.266-80Zm.234-60Q622-140 721-239.5t99-241Q820-622 721.188-721 622.375-820 480-820q-141 0-240.5 98.812Q140-622.375 140-480q0 141 99.5 240.5t241 99.5Zm-.5-340Z"
-              />
-            </svg>
-            <span>Risks</span>
-          </div>
-        </a>
-        <a href="#">
-          <div class="action-button" id="quiz">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="48"
-              viewBox="0 -960 960 960"
-              width="48"
-              id="quiz_icon"
-            >
-              <path
-                d="M543-340q16.595 0 28.798-12.202Q584-364.405 584-381t-12.202-28.798Q559.595-422 543-422t-28.798 12.202Q502-397.595 502-381t12.202 28.798Q526.405-340 543-340Zm-25-126h47q2-29 8.5-43t32.5-39q27-26 37.5-45.395Q654-612.79 654-639q0-45.882-31.5-74.941Q591-743 540-743q-38 0-68 20.5T428-665l45 19q11-25 27.5-38t39.5-13q29.778 0 48.389 17Q607-663 607-637q0 20-9 35t-32 32q-32 29-40 46.5t-8 57.5ZM260-200q-24 0-42-18t-18-42v-560q0-24 18-42t42-18h560q24 0 42 18t18 42v560q0 24-18 42t-42 18H260Zm0-60h560v-560H260v560ZM140-80q-24 0-42-18t-18-42v-620h60v620h620v60H140Zm120-740v560-560Z"
-              />
-            </svg>
-            <span>Quiz</span>
-          </div>
+            <div class="action-button" id="risks">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                viewBox="0 -960 960 960"
+                width="48"
+                id="risks_icon"
+              >
+                <path
+                  d="M479.982-280q14.018 0 23.518-9.482 9.5-9.483 9.5-23.5 0-14.018-9.482-23.518-9.483-9.5-23.5-9.5-14.018 0-23.518 9.482-9.5 9.483-9.5 23.5 0 14.018 9.482 23.518 9.483 9.5 23.5 9.5ZM453-433h60v-253h-60v253Zm27.266 353q-82.734 0-155.5-31.5t-127.266-86q-54.5-54.5-86-127.341Q80-397.681 80-480.5q0-82.819 31.5-155.659Q143-709 197.5-763t127.341-85.5Q397.681-880 480.5-880q82.819 0 155.659 31.5Q709-817 763-763t85.5 127Q880-563 880-480.266q0 82.734-31.5 155.5T763-197.684q-54 54.316-127 86Q563-80 480.266-80Zm.234-60Q622-140 721-239.5t99-241Q820-622 721.188-721 622.375-820 480-820q-141 0-240.5 98.812Q140-622.375 140-480q0 141 99.5 240.5t241 99.5Zm-.5-340Z"
+                />
+              </svg>
+              <span>Risks</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="action-button" id="quiz">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                viewBox="0 -960 960 960"
+                width="48"
+                id="quiz_icon"
+              >
+                <path
+                  d="M543-340q16.595 0 28.798-12.202Q584-364.405 584-381t-12.202-28.798Q559.595-422 543-422t-28.798 12.202Q502-397.595 502-381t12.202 28.798Q526.405-340 543-340Zm-25-126h47q2-29 8.5-43t32.5-39q27-26 37.5-45.395Q654-612.79 654-639q0-45.882-31.5-74.941Q591-743 540-743q-38 0-68 20.5T428-665l45 19q11-25 27.5-38t39.5-13q29.778 0 48.389 17Q607-663 607-637q0 20-9 35t-32 32q-32 29-40 46.5t-8 57.5ZM260-200q-24 0-42-18t-18-42v-560q0-24 18-42t42-18h560q24 0 42 18t18 42v560q0 24-18 42t-42 18H260Zm0-60h560v-560H260v560ZM140-80q-24 0-42-18t-18-42v-620h60v620h620v60H140Zm120-740v560-560Z"
+                />
+              </svg>
+              <span>Quiz</span>
+            </div>
+          </a>
         </div>
-      </a>
-      </section>
-      <h2 class="content-headline">AI-Domains</h2>
-      <section class="carousel">
-        <div class="left-zone">
-          <ul class="list">
-            <li class="item">
-              <input
-                type="radio"
-                id="radio_healthcare"
-                name="carousel1"
-                value="Healthcare"
-                class="carousel-menu1"
-                checked
-              /><label class="label_healthcare" for="radio_healthcare"
-                >Healthcare</label
-              >
-              <div class="content content_healthcare">
-                <span class="picto"></span>
-                <h2>Healthcare</h2>
-                <p>
-                  In healthcare, AI is revolutionizing the diagnosis and
-                  treatment of diseases. From medical imaging analysis to
-                  predictive modeling for personalized medicine, AI algorithms
-                  analyze vast amounts of patient data, assisting doctors in
-                  accurate diagnoses, optimizing treatment plans, and even
-                  predicting potential health risks.
-                </p>
-              </div>
-            </li>
-            <li class="item">
-              <input
-                type="radio"
-                id="radio_finance"
-                name="carousel1"
-                value="Finance"
-                class="carousel-menu1"
-              /><label class="label_finance" for="radio_finance">Finance</label>
-              <div class="content content_finance">
-                <span class="picto"></span>
-                <h2>Finance</h2>
-                <p>
-                  In the realm of finance, AI algorithms enable advanced data
-                  analysis, risk assessment, and fraud detection. Machine
-                  learning models process vast amounts of financial data,
-                  spotting patterns, predicting market trends, and assisting
-                  financial institutions in making informed decisions.
-                  AI-powered chatbots are also transforming customer service,
-                  providing personalized recommendations and assistance.
-                </p>
-              </div>
-            </li>
-            <li class="item">
-              <input
-                type="radio"
-                id="radio_transportation"
-                name="carousel1"
-                value="Transportation"
-                class="carousel-menu1"
-              /><label class="label_transportation" for="radio_transportation"
-                >Transportation</label
-              >
-              <div class="content content_transportation">
-                <span class="picto"></span>
-                <h2>Transportation</h2>
-                <p>
-                  AI is driving innovation in transportation, with self-driving
-                  cars, drones, and smart traffic management systems. Machine
-                  learning algorithms enhance navigation systems, analyze
-                  traffic patterns, and optimize routes, leading to improved
-                  safety, reduced congestion, and increased efficiency in
-                  transportation networks.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="middle-border"></div>
-        <div class="right-zone"></div>
-      </section>
-      <h2 class="content-headline">Possible Use-Cases</h2>
-      <section class="carousel" id="bonus-content">
-        <div class="left-zone">
-          <ul class="list">
-            <li class="item">
-              <input
-                type="radio"
-                id="radio_entertainment"
-                name="carousel2"
-                value="Entertainment"
-                class="carousel-menu2"
-                checked
-              /><label class="label_entertainment" for="radio_entertainment"
-                >Entertainment</label
-              >
-              <div class="content content_entertainment">
-                <span class="picto"></span>
-                <h2>AI in Entertainment</h2>
-                <p>
-                  AI reshapes entertainment through immersive experiences and
-                  personalized content. Machine learning analyzes user
-                  preferences, recommending tailored content. VR and AR
-                  transform gaming, film, and interactive experiences,
-                  transporting audiences to new realms.
-                </p>
-              </div>
-            </li>
-            <li class="item">
-              <input
-                type="radio"
-                id="radio_agriculture"
-                name="carousel2"
-                value="Agriculture"
-                class="carousel-menu2"
-              /><label class="label_agriculture" for="radio_agriculture"
-                >Agriculture</label
-              >
-              <div class="content content_agriculture">
-                <span class="picto"></span>
-                <h2>AI for Sustainable Agriculture</h2>
-                <p>
-                  AI revolutionizes agriculture with autonomous equipment,
-                  precision monitoring, and data analysis. It empowers farmers
-                  to make data-driven decisions, optimize resources, and
-                  increase yields while minimizing environmental impact
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="middle-border"></div>
-        <div class="right-zone"></div>
       </section>
     </main>
     <footer>
