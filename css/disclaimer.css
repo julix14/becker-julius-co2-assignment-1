@@ -25,9 +25,3 @@ table td + td {
 table tr:nth-of-type(odd) {
   background-color: #ebeae8;
 }
-
-td.col3 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  background-color: red;
-}
