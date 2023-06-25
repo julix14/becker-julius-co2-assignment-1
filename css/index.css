@@ -37,10 +37,6 @@
   width: 1000px;
   height: 500px;
   position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin-top: 2rem;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -176,79 +172,6 @@ body .carousel .right-zone {
 .material-symbols-outlined {
   font-size: 3.5rem !important;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-}
-/* Darkmode Toggle Button */
-#darkmode-toggle-label {
-  position: relative;
-  width: 250px;
-  height: 100px;
-  display: block;
-  background-color: #fff;
-  border-radius: 100px;
-  box-shadow: inset 0px 2.5px 7.5px rgba(0, 0, 0, 0.4),
-    inset 0 -2.5px 7.5px rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#darkmode-toggle-label:after {
-  content: "";
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  background: linear-gradient(180deg, #ffcc89, #d8860b);
-  border-radius: 180px;
-  box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.4);
-  transition: 0.3s;
-}
-
-#darkmode-toggle {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
-#darkmode-toggle:checked + #darkmode-toggle-label {
-  background-color: #242424;
-}
-
-#darkmode-toggle:checked + #darkmode-toggle-label:after {
-  left: 245px;
-  transform: translate(-100%);
-  background: linear-gradient(180deg, #777, #3a3a3a);
-}
-
-#darkmode-toggle-label:active:after {
-  width: 130px;
-}
-
-#darkmode-toggle-label img {
-  position: absolute;
-  width: 60px;
-  top: 20px;
-  z-index: 100;
-}
-
-#darkmode-toggle-label img#sun {
-  left: 20px;
-  filter: invert(1);
-  transition: 0.3s;
-}
-
-#darkmode-toggle-label img#moon {
-  left: 170px;
-  fill: #7e7e7e;
-  transition: 0.3s;
-}
-
-#darkmode-toggle:checked + #darkmode-toggle-label img#sun {
-  filter: invert(1);
-}
-
-#darkmode-toggle:checked + #darkmode-toggle-label img#moon {
-  fill: #fff;
 }
 
 /* Actions Buttons */
