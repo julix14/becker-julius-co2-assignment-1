@@ -5,6 +5,7 @@
 
 .content-block {
   display: flex;
+  flex-shrink: 0;
   width: 1000px;
   height: 500px;
   align-items: center;
@@ -20,10 +21,20 @@
   padding-right: 2rem;
 }
 
-#content {
+#slideshow {
   display: flex;
+  align-items: center;
+  width: 1000px;
+  justify-content: space-around;
 }
 
-main {
-  overflow: hidden;
+.content-block {
+  display: none;
+}
+
+.control-button {
+  border: none;
+  background-color: transparent;
+  font-size: 4rem;
+  cursor: pointer;
 }
