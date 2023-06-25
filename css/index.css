@@ -46,7 +46,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
-.carousel #left-zone {
+.carousel .left-zone {
   background: #fff;
   height: 75%;
   flex-grow: 0;
@@ -56,7 +56,7 @@
   justify-content: left;
 }
 
-#left-zone .list {
+.left-zone .list {
   display: flex;
   list-style: none;
   align-content: stretch;
@@ -137,7 +137,7 @@
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-body .carousel #middle-border {
+body .carousel .middle-border {
   background-color: #eee;
   height: 75%;
   flex-grow: 1;
@@ -145,7 +145,7 @@ body .carousel #middle-border {
   z-index: 0;
 }
 
-body .carousel #right-zone {
+body .carousel .right-zone {
   background: #fff;
   height: 100%;
   flex-grow: 3;

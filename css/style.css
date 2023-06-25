@@ -13,13 +13,14 @@ body {
 }
 
 header {
-  display: grid;
   width: 100%;
   padding: 2rem 0rem;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  gap: 0px 0px;
+  grid-template-areas: ". Headline darkmode-switch";
+  align-items: center;
 }
 
 footer {
@@ -38,5 +39,11 @@ h1 {
 }
 
 #darkmode-toggle-button {
+  grid-area: darkmode-switch;
   justify-self: end;
+}
+
+header h1 {
+  grid-area: Headline;
+  justify-self: center;
 }
