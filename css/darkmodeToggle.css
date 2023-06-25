@@ -60,14 +60,15 @@
 
 #darkmode-toggle-label img#moon {
   left: 170px;
+  top: 28px;
   fill: #7e7e7e;
   transition: 0.3s;
 }
 
 #darkmode-toggle:checked + #darkmode-toggle-label img#sun {
-  filter: invert(1);
+  filter: invert(0);
 }
 
 #darkmode-toggle:checked + #darkmode-toggle-label img#moon {
-  fill: #fff;
+  filter: invert(1);
 }
