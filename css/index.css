@@ -171,6 +171,8 @@ body .carousel .right-zone {
   text-align: center;
 }
 
+/* Darkmode Toggle Button */
+
 #darkmode-toggle-label {
   position: relative;
   width: 250px;
@@ -242,4 +244,56 @@ body .carousel .right-zone {
 
 #darkmode-toggle:checked + #darkmode-toggle-label img#moon {
   fill: #fff;
+}
+
+/* Actions Buttons */
+#actions {
+  height: 500px;
+  width: 1000px;
+  margin-top: 2rem;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+#actions-card {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+}
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  height: 260px;
+  transition: 0.35s;
+}
+
+#benefits {
+  border-radius: 10px;
+  background-color: #3c896d;
+}
+
+#benefits span {
+  margin-top: -20px;
+  z-index: -15;
+  transition: 0.35s;
+  text-align: center;
+  color: #fcfaf9;
+  font-size: larger;
+}
+#benefits svg {
+  fill: #fcfaf9;
+  width: 250px;
+  height: 250px;
+}
+
+#benefits:hover span {
+  margin-top: 10px;
+  transition: 0.35s;
+  z-index: 10;
+}
+
+#benefits:hover {
+  height: 300px;
+  transition: 0.3s;
 }
