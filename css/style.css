@@ -19,7 +19,7 @@ header {
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 1fr;
   gap: 0px 0px;
-  grid-template-areas: ". Headline darkmode-switch";
+  grid-template-areas: "home headline darkmode-switch";
   align-items: center;
 }
 
@@ -45,6 +45,22 @@ h1 {
 }
 
 header h1 {
-  grid-area: Headline;
+  grid-area: headline;
   justify-self: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-button {
+  grid-area: home;
+  justify-self: center;
+  color: #171a21;
+  text-decoration: none;
+}
+
+.material-symbols-outlined {
+  font-size: 3.5rem !important;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }

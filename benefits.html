@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Benefits of AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/benefitsRisks.css" />
+    <link rel="stylesheet" href="css/darkmodeToggle.css" />
+    <script src="js/benefitsRisks.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body onload="showDivs(1)">
+    <header>
+      <a href="index.html" class="material-symbols-outlined home-button"
+        >home</a
+      >
+      <h1>Benefits</h1>
+      <div id="darkmode-toggle-button">
+        <input type="checkbox" id="darkmode-toggle" />
+        <label for="darkmode-toggle" id="darkmode-toggle-label">
+          <img src="./img/sun.svg" alt="sun" id="sun" />
+          <img src="./img/moon.svg" alt="moon" id="moon" />
+        </label>
+      </div>
+    </header>
+    <main>
+      <section id="content">
+        <div id="slideshow">
+          <button class="control-button" onclick="plusDivs(-1)">
+            &#10094;
+          </button>
+          <div class="content-block">
+            <div>
+              <h2>Efficiency Unleashed: The Power of AI</h2>
+              <p>
+                AI streamlines processes, automates repetitive tasks, and boosts
+                productivity. With its ability to analyze vast amounts of data
+                quickly, AI-driven systems deliver faster and more accurate
+                results, saving time and resources. From data analysis to
+                workflow optimization, AI empowers businesses to operate with
+                increased efficiency and effectiveness, gaining a competitive
+                edge in the digital age.
+              </p>
+            </div>
+            <img src="img/benefit1.jpeg" alt="Symbol-Picture" />
+          </div>
+          <div class="content-block">
+            <div>
+              <h2>Insights that Drive Success: AI-Powered Analytics</h2>
+              <p>
+                AI-driven analytics unlock valuable insights from complex data
+                sets. Machine learning algorithms analyze patterns, detect
+                trends, and predict outcomes with remarkable precision. By
+                leveraging AI, businesses gain a deeper understanding of their
+                customers, markets, and operations, enabling data-driven
+                decision-making. From personalized marketing strategies to
+                predictive forecasting, AI-powered analytics pave the way for
+                enhanced performance and strategic growth.
+              </p>
+            </div>
+            <img src="img/benefit2.jpeg" alt="Symbol-Picture" />
+          </div>
+          <div class="content-block">
+            <div>
+              <h2>Empowering Human Potential: AI Augmentation</h2>
+              <p>
+                AI serves as a powerful tool for augmenting human capabilities.
+                By automating repetitive tasks, AI frees up time for creativity,
+                problem-solving, and innovation. Collaborating with AI-powered
+                systems, individuals and teams can accomplish more, achieve
+                higher levels of productivity, and focus on tasks that require
+                human expertise. The symbiotic relationship between humans and
+                AI unlocks untapped potential and propels us towards a future of
+                limitless possibilities.
+              </p>
+            </div>
+            <img src="img/benefit3.jpeg" alt="Symbol-Picture" />
+          </div>
+          <button class="control-button" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

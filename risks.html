@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Benefits of AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/benefitsRisks.css" />
+    <link rel="stylesheet" href="css/darkmodeToggle.css" />
+    <script src="js/benefitsRisks.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body onload="showDivs(1)">
+    <header>
+      <a href="index.html" class="material-symbols-outlined home-button"
+        >home</a
+      >
+      <h1>Benefits</h1>
+      <div id="darkmode-toggle-button">
+        <input type="checkbox" id="darkmode-toggle" />
+        <label for="darkmode-toggle" id="darkmode-toggle-label">
+          <img src="./img/sun.svg" alt="sun" id="sun" />
+          <img src="./img/moon.svg" alt="moon" id="moon" />
+        </label>
+      </div>
+    </header>
+    <main>
+      <section id="content">
+        <div id="slideshow">
+          <button class="control-button" onclick="plusDivs(-1)">
+            &#10094;
+          </button>
+          <div class="content-block">
+            <div>
+              <h2>Ethical Dilemmas: Navigating AI's Moral Challenges</h2>
+              <p>
+                As AI becomes more advanced, ethical concerns arise. Issues such
+                as bias, privacy, and algorithmic transparency must be
+                addressed. AI systems can inherit biases from training data,
+                compromising fairness. Privacy concerns emerge as AI processes
+                and stores vast amounts of personal information. Ensuring
+                ethical guidelines, regulations, and responsible AI practices
+                are in place becomes crucial to mitigate risks and promote trust
+                in AI technologies.
+              </p>
+            </div>
+            <img src="img/risk1.png" alt="Symbol-Picture" />
+          </div>
+          <div class="content-block">
+            <div>
+              <h2>Job Displacement: Balancing Automation and Employment</h2>
+              <p>
+                While AI automation improves efficiency, it also raises concerns
+                about job displacement. Some roles may become redundant as
+                machines perform tasks traditionally done by humans. Upskilling
+                and reskilling workers become essential to adapt to the evolving
+                job market. Balancing automation with the preservation of
+                meaningful employment becomes a challenge, requiring proactive
+                measures such as retraining programs and creating new job
+                opportunities in AI-related fields.
+              </p>
+            </div>
+            <img src="img/risk2.png" alt="Symbol-Picture" />
+          </div>
+          <div class="content-block">
+            <div>
+              <h2>Security Vulnerabilities: Safeguarding AI Systems</h2>
+              <p>
+                AI systems can be vulnerable to security breaches and malicious
+                attacks. Adversarial attacks can manipulate AI models, leading
+                to unreliable outputs or compromised decision-making. Protecting
+                AI systems from cyber threats, securing data privacy, and
+                ensuring robust cybersecurity measures become imperative. By
+                implementing stringent security protocols and continuous
+                monitoring, the risks associated with AI's susceptibility to
+                attacks can be mitigated.
+              </p>
+            </div>
+            <img src="img/risk3.jpeg" alt="Symbol-Picture" />
+          </div>
+          <button class="control-button" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
