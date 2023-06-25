@@ -2,6 +2,14 @@ body {
   height: 100vh;
 }
 
+.text-block {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  line-height: 1.5;
+}
+
 .content-block p,
 .content-block h2 {
   padding: 2rem;
