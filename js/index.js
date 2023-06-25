@@ -2,10 +2,24 @@ const checkbox = document.getElementById("darkmode-toggle");
 
 checkbox.addEventListener("change", function () {
   if (this.checked) {
-    document.body.style.backgroundColor = "#171a21";
-    document.body.style.color = "#fcfaf9";
+    setDarkmodeStyle();
+    localStorage.setItem("darkmode", "true");
   } else {
-    document.body.style.backgroundColor = "#fcfaf9";
-    document.body.style.color = "#171a21";
+    setLightmodeStyle();
+    localStorage.setItem("darkmode", "false");
   }
 });
+
+function setDarkmodeStyle() {
+  document.body.style.backgroundColor = "#171a21";
+  document.body.style.color = "#fcfaf9";
+  const elements = document.querySelectorAll(
+    ".left-zone, .right-zone, .carousel, .middle-border, .content-block"
+  );
+
+  for (let element of elements) {
+    element.style.backgroundColor = "#171a21";
+  }
+}
+
+function setLightmodeStyle() {}
