@@ -6,8 +6,11 @@ function nextQuestion() {
     ).checked = false;
   }
   currentQuestion++;
+  console.log(questions.length);
   if (currentQuestion < questions.length) {
     displayQuestion(currentQuestion);
+  } else {
+    displayScore();
   }
 }
 
@@ -62,19 +65,36 @@ const questions = [
 let score = 0;
 let currentQuestion = 0;
 
-function displayQuestion(currentQuestion) {
+function getContainerAndQuestion(questionNumber) {
   let questionContainer;
   let question;
-
-  if (questions[currentQuestion].questionType === "trueFalse") {
+  if (questions[questionNumber].questionType === "trueFalse") {
     questionContainer = document.getElementById("tf-question-container");
     question = document.getElementById("tf-question");
-  } else if (questions[currentQuestion].questionType === "multipleChoice") {
+  } else if (questions[questionNumber].questionType === "multipleChoice") {
     questionContainer = document.getElementById("mc-question-container");
     question = document.getElementById("mc-question");
-  } else if (questions[currentQuestion].questionType === "text") {
+  } else if (questions[questionNumber].questionType === "text") {
     questionContainer = document.getElementById("ft-question-container");
     question = document.getElementById("ft-question");
+  }
+
+  return [questionContainer, question];
+}
+
+function hidePreviousQuestion(currentQuestion) {
+  let previousQuestionContainer = getContainerAndQuestion(
+    currentQuestion - 1
+  )[0];
+  previousQuestionContainer.style.display = "none";
+}
+
+function displayQuestion(currentQuestion) {
+  let questionContainer = getContainerAndQuestion(currentQuestion)[0];
+  let question = getContainerAndQuestion(currentQuestion)[1];
+
+  if (currentQuestion !== 0) {
+    hidePreviousQuestion(currentQuestion);
   }
 
   questionContainer.style.display = "block";
@@ -99,7 +119,7 @@ function checkAnswer(currentQuestion) {
   } else if (questions[currentQuestion].questionType === "multipleChoice") {
     answer = document.querySelector('input[name="mc-answer"]:checked').value;
   } else if (questions[currentQuestion].questionType === "text") {
-    answer = document.getElementById("ft-answer").value.tolowerCase();
+    answer = document.getElementById("ft-answer").value.toLowerCase();
   }
 
   if (answer === questions[currentQuestion].correctAnswer.toLowerCase()) {
@@ -108,4 +128,12 @@ function checkAnswer(currentQuestion) {
   } else {
     console.log("Incorrect!");
   }
+}
+
+function displayScore() {
+  hidePreviousQuestion(questions.length);
+  let scoreContainer = document.getElementById("result-container");
+  scoreContainer.style.display = "block";
+  let scoreText = document.getElementById("result-text");
+  scoreText.innerHTML = score * 2 + "/10 Points";
 }
