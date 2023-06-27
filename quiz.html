@@ -34,63 +34,68 @@
     <main>
       <div class="question" id="mc-question-container">
         <h2 id="mc-question">Question:</h2>
-        <div id="possible-answers-mc">
-          <div>
-            <input id="answer1" type="radio" value="1" name="mc-answer" />
-            <span>A</span>
-            <label class="answer" for="answer1">Answer 1</label>
+        <div id="possible-answers-mc" class="answer-options">
+          <input id="answer1" type="radio" value="1" name="mc-answer" />
+          <div id="label-answer1">
+            <span onclick="checkRadioButton(1)">A</span
+            ><label class="answer" for="answer1">Answer 1</label>
           </div>
-          <div>
-            <input id="answer2" type="radio" value="2" name="mc-answer" />
-            <span>B</span>
-            <label class="answer" for="answer2">Answer 2</label>
+
+          <input id="answer2" type="radio" value="2" name="mc-answer" />
+          <div id="label-answer2">
+            <span onclick="checkRadioButton(2)">B</span
+            ><label class="answer" for="answer2">Answer 2</label>
           </div>
-          <div>
-            <input id="answer3" type="radio" value="3" name="mc-answer" />
-            <span>C</span>
-            <label class="answer" for="answer3">Answer 3</label>
+
+          <input id="answer3" type="radio" value="3" name="mc-answer" />
+          <div id="label-answer3">
+            <span onclick="checkRadioButton(3)">C</span
+            ><label class="answer" for="answer3">Answer 3</label>
           </div>
-          <div>
-            <input id="answer4" type="radio" value="4" name="mc-answer" />
-            <span>D</span>
-            <label class="answer" for="answer4">Answer 4</label>
+
+          <input id="answer4" type="radio" value="4" name="mc-answer" />
+          <div id="label-answer4">
+            <span onclick="checkRadioButton(4)">D</span
+            ><label class="answer" for="answer4">Answer 4</label>
           </div>
         </div>
-        <button onclick="nextQuestion()" class="next-question">Next</button>
+        <div class="button-container">
+          <button onclick="skipQuestion()" class="next-question">Skip</button>
+          <button onclick="nextQuestion()" class="next-question">Next</button>
+        </div>
       </div>
       <div class="question" id="tf-question-container">
         <h2 id="tf-question">Question:</h2>
-        <div id="possible-answers-tf">
-          <div>
-            <input
-              id="answer-true"
-              type="radio"
-              value="true"
-              name="tf-answer"
-            />
-            <span>A</span>
-            <label for="answer-true">True</label>
+        <div id="possible-answers-tf" class="answer-options">
+          <input id="answer-true" type="radio" value="true" name="tf-answer" />
+          <div id="label-true">
+            <label for="answer-true"><span>A</span>True</label>
           </div>
-          <div>
-            <input
-              id="answer-false"
-              type="radio"
-              value="false"
-              name="tf-answer"
-            />
-            <span>B</span>
-            <label for="answer-false">False</label>
+          <input
+            id="answer-false"
+            type="radio"
+            value="false"
+            name="tf-answer"
+          />
+          <div id="label-false">
+            <label for="answer-false"><span>B</span>False</label>
           </div>
         </div>
-        <button onclick="nextQuestion()" class="next-question">Next</button>
+        <div class="button-container">
+          <button onclick="skipQuestion()" class="next-question">Skip</button>
+          <button onclick="nextQuestion()" class="next-question">Next</button>
+        </div>
       </div>
       <div class="question" id="ft-question-container">
         <h2 id="ft-question">Question:</h2>
         <div>
-          <label for="answer-text">Answer:</label>
+          <label for="ft-answer">Answer:</label>
           <input id="ft-answer" name="text-field" type="text" />
         </div>
-        <button onclick="nextQuestion()" class="next-question">Next</button>
+        <div class="button-container">
+          <button onclick="skipQuestion()" class="next-question">Skip</button>
+          <button onclick="nextQuestion()" class="next-question">Next</button>
+        </div>
       </div>
       <div class="question" id="result-container">
         <h2 id="result">Result:</h2>

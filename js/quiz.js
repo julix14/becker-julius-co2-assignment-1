@@ -97,7 +97,7 @@ function displayQuestion(currentQuestion) {
     hidePreviousQuestion(currentQuestion);
   }
 
-  questionContainer.style.display = "block";
+  questionContainer.style.display = "flex";
   question.innerHTML = questions[currentQuestion].question;
 
   let possibleAnswers;
@@ -121,7 +121,7 @@ function checkAnswer(currentQuestion) {
   } else if (questions[currentQuestion].questionType === "text") {
     answer = document.getElementById("ft-answer").value.toLowerCase();
   }
-
+  questions[currentQuestion].userAnswer = answer;
   if (answer === questions[currentQuestion].correctAnswer.toLowerCase()) {
     score++;
     console.log("Correct!");
@@ -133,7 +133,12 @@ function checkAnswer(currentQuestion) {
 function displayScore() {
   hidePreviousQuestion(questions.length);
   let scoreContainer = document.getElementById("result-container");
-  scoreContainer.style.display = "block";
+  scoreContainer.style.display = "flex";
   let scoreText = document.getElementById("result-text");
   scoreText.innerHTML = score * 2 + "/10 Points";
+}
+
+function checkRadioButton(answerNumber) {
+  let radioButton = document.getElementById("answer" + answerNumber);
+  radioButton.checked = true;
 }
