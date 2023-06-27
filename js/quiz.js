@@ -1,6 +1,6 @@
 const questions = [
   {
-    question: "AI automation can lead to job displacement.",
+    question: "AI automation can lead to job displacement?",
     answer: ["True", "False"],
     correctAnswer: "true",
     questionType: "trueFalse",
@@ -51,12 +51,25 @@ let currentQuestion = 0;
 
 function nextQuestion() {
   checkAnswer(currentQuestion);
-  if (questions[currentQuestion].questionType === "multipleChoice") {
-    answer = document.querySelector(
-      'input[name="mc-answer"]:checked'
-    ).checked = false;
+  try {
+    if (questions[currentQuestion].questionType === "multipleChoice") {
+      answer = document.querySelector(
+        'input[name="mc-answer"]:checked'
+      ).checked = false;
+    }
+    if (questions[currentQuestion].questionType === "trueFalse") {
+      answer = document.querySelector(
+        'input[name="tf-answer"]:checked'
+      ).checked = false;
+    }
+    if (questions[currentQuestion].questionType === "text") {
+      answer = document.getElementById("ft-answer").value = "";
+    }
+    currentQuestion++;
+  } catch (e) {
+    alert("Please select an answer");
   }
-  currentQuestion++;
+
   if (currentQuestion < questions.length) {
     displayQuestion(currentQuestion);
   } else {
@@ -130,13 +143,12 @@ function checkAnswer(questionNumber) {
       currentQuestion.correct =
         currentQuestion.answer[answer - 1] === currentQuestion.correctAnswer;
       currentQuestion.userAnswer = currentQuestion.answer[answer - 1];
-      console.log(currentQuestion.userAnswer);
       break;
 
     case "text":
-      answer = document.getElementById("ft-answer").value.toLowerCase();
+      answer = document.getElementById("ft-answer").value.trim() || "";
       currentQuestion.correct =
-        answer === currentQuestion.correctAnswer.toLowerCase();
+        answer.toLowerCase() === currentQuestion.correctAnswer.toLowerCase();
       currentQuestion.userAnswer = answer;
       break;
 
@@ -182,12 +194,16 @@ function buildResultsTable() {
 
 function skipQuestion() {
   currentQuestion++;
-  questions(currentQuestion).userAnswer = "Skipped";
-  questions(currentQuestion).correct = false;
+  questions[currentQuestion].userAnswer = "Skipped";
+  questions[currentQuestion].correct = false;
   displayQuestion(currentQuestion);
 }
 
 function checkRadioButton(answerNumber) {
   let radioButton = document.getElementById("answer" + answerNumber);
   radioButton.checked = true;
+}
+
+function restartQuiz() {
+  window.location.reload();
 }

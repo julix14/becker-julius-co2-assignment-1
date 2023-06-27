@@ -117,6 +117,24 @@
   color: white;
   font-weight: 700;
 }
+
+#restart-button {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.35s;
+  border-radius: 0;
+  margin: 2rem;
+}
+
+#restart-button:hover {
+  transform: scaleY(1.2);
+  background-color: #3075d6 !important;
+  transition: 0.2s;
+  color: white;
+  font-weight: 700;
+}
+
 main {
   width: 1000px;
 }
