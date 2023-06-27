@@ -1,0 +1,111 @@
+table,
+th {
+  border: 1px solid #fcfaf9;
+}
+
+table td + td {
+  border-left: 1px solid #fcfaf9;
+}
+
+a {
+  color: #fcfaf9;
+}
+
+table tr:nth-of-type(odd) {
+  background-color: #34353d;
+}
+
+/* Index */
+
+.carousel {
+  background-color: #16181f;
+  border: black 2px solid;
+}
+
+.carousel .left-zone {
+  background: #16181f;
+}
+
+.carousel-menu ~ label:hover {
+  color: #34353d;
+}
+
+.carousel-menu:checked ~ label.label_healthcare,
+.carousel-menu:checked ~ label.label_entertainment {
+  color: #9c1c2f;
+  border-right: solid 4px #9c1c2f;
+}
+
+.carousel-menu:checked ~ label.label_finance,
+.carousel-menu:checked ~ label.label_customersupport {
+  color: #2564bb;
+  border-right: solid 4px #2564bb;
+}
+
+.carousel-menu:checked ~ label.label_transportation,
+.carousel-menu:checked ~ label.label_agriculture {
+  color: #32715a;
+  border-right: solid 4px #32715a;
+}
+
+body .carousel .middle-border {
+  background-color: #eee;
+}
+
+body .carousel .right-zone {
+  background: #16181f;
+}
+#benefits {
+  background-color: #32715a;
+}
+
+#risks {
+  background-color: #9c1c2f;
+}
+
+#quiz {
+  background-color: #2564bb;
+}
+
+/*BenefitsRisks*/
+.content-block {
+  background-color: #16181f;
+  border: black 2px solid;
+}
+.control-button {
+  color: #fcfaf9;
+}
+
+/* Quiz */
+.question {
+  background-color: #16181f;
+  border: black 2px solid;
+}
+
+.answer-options div {
+  border: 1px solid #fcfaf9;
+}
+
+.answer-options input:checked + div {
+  background-color: #2564bb;
+}
+
+.button-container button:hover {
+  background-color: #2564bb !important;
+  color: #fcfaf9;
+}
+
+#restart-button:hover {
+  background-color: #2564bb !important;
+  color: #fcfaf9;
+}
+
+/* Style.css */
+body {
+  color: #fcfaf9;
+  background-color: #171a21;
+}
+
+.home-button {
+  color: #fcfaf9;
+}

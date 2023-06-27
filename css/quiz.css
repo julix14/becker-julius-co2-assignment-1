@@ -20,7 +20,6 @@
   height: 500px;
   width: 1000px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #fff;
 }
 
 #possible-answers-mc {
@@ -41,7 +40,6 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: 1px solid #171a21;
   padding: 0.5rem;
   margin: 0 2rem 0 2rem;
 }
@@ -81,14 +79,6 @@
 }
 
 .answer-options input:checked + div {
-  background-color: #3075d6;
-  color: #fcfaf9;
-  transform: scale(1.1);
-  transition: 0.35s;
-}
-
-.answer-options input:checked + div {
-  background-color: #3075d6;
   color: #fcfaf9;
   transform: scale(1.1);
   transition: 0.35s;
@@ -112,11 +102,25 @@
 
 .button-container button:hover {
   transform: scale(1.1);
-  background-color: #3075d6 !important;
   transition: 0.2s;
-  color: white;
   font-weight: 700;
 }
+
+#restart-button {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.35s;
+  border-radius: 0;
+  margin: 2rem;
+}
+
+#restart-button:hover {
+  transform: scaleY(1.2);
+  transition: 0.2s;
+  font-weight: 700;
+}
+
 main {
   width: 1000px;
 }
@@ -125,20 +129,15 @@ body {
   height: 100vh;
 }
 
-table,
-th {
-  border: 1px solid black;
-  border-collapse: collapse;
+table {
+  margin: 0 2rem 0 2rem;
 }
 
-table td + td {
-  border-left: 1px solid black;
+table,
+th {
+  border-collapse: collapse;
 }
 
 table tr:nth-of-type(odd) {
   background-color: #ebeae8;
-}
-
-table {
-  margin: 0 2rem 0 2rem;
 }

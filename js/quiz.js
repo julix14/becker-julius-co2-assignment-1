@@ -1,24 +1,8 @@
-function nextQuestion() {
-  checkAnswer(currentQuestion);
-  if (questions[currentQuestion].questionType === "multipleChoice") {
-    answer = document.querySelector(
-      'input[name="mc-answer"]:checked'
-    ).checked = false;
-  }
-  currentQuestion++;
-  console.log(questions.length);
-  if (currentQuestion < questions.length) {
-    displayQuestion(currentQuestion);
-  } else {
-    displayScore();
-  }
-}
-
 const questions = [
   {
-    question: "AI automation can lead to job displacement.",
+    question: "AI automation can lead to job displacement?",
     answer: ["True", "False"],
-    correctAnswer: "True",
+    correctAnswer: "true",
     questionType: "trueFalse",
   },
   {
@@ -63,7 +47,35 @@ const questions = [
 ];
 
 let score = 0;
-let currentQuestion = 4;
+let currentQuestion = 0;
+
+function nextQuestion() {
+  checkAnswer(currentQuestion);
+  try {
+    if (questions[currentQuestion].questionType === "multipleChoice") {
+      answer = document.querySelector(
+        'input[name="mc-answer"]:checked'
+      ).checked = false;
+    }
+    if (questions[currentQuestion].questionType === "trueFalse") {
+      answer = document.querySelector(
+        'input[name="tf-answer"]:checked'
+      ).checked = false;
+    }
+    if (questions[currentQuestion].questionType === "text") {
+      answer = document.getElementById("ft-answer").value = "";
+    }
+    currentQuestion++;
+  } catch (e) {
+    alert("Please select an answer");
+  }
+
+  if (currentQuestion < questions.length) {
+    displayQuestion(currentQuestion);
+  } else {
+    displayScore();
+  }
+}
 
 function getContainerAndQuestion(questionNumber) {
   let questionContainer;
@@ -89,7 +101,7 @@ function hidePreviousQuestion(currentQuestion) {
   previousQuestionContainer.style.display = "none";
 }
 
-function displayQuestion(currentQuestion) {
+function displayQuestion() {
   let questionContainer = getContainerAndQuestion(currentQuestion)[0];
   let question = getContainerAndQuestion(currentQuestion)[1];
 
@@ -110,56 +122,69 @@ function displayQuestion(currentQuestion) {
   }
 }
 
-function checkAnswer(currentQuestion) {
+function checkAnswer(questionNumber) {
+  const currentQuestion = questions[questionNumber];
   let answer;
-  if (questions[currentQuestion].questionType === "trueFalse") {
-    answer = document
-      .querySelector('input[name="tf-answer"]:checked')
-      .value.toLowerCase();
-  } else if (questions[currentQuestion].questionType === "multipleChoice") {
-    answer = document.querySelector('input[name="mc-answer"]:checked').value;
-  } else if (questions[currentQuestion].questionType === "text") {
-    answer = document.getElementById("ft-answer").value.toLowerCase();
+
+  switch (currentQuestion.questionType) {
+    case "trueFalse":
+      answer =
+        document
+          .querySelector('input[name="tf-answer"]:checked')
+          ?.value.toLowerCase() || "";
+      currentQuestion.correct =
+        answer === currentQuestion.correctAnswer.toLowerCase();
+      currentQuestion.userAnswer = answer;
+      break;
+
+    case "multipleChoice":
+      answer =
+        document.querySelector('input[name="mc-answer"]:checked')?.value || "";
+      currentQuestion.correct =
+        currentQuestion.answer[answer - 1] === currentQuestion.correctAnswer;
+      currentQuestion.userAnswer = currentQuestion.answer[answer - 1];
+      break;
+
+    case "text":
+      answer = document.getElementById("ft-answer").value.trim() || "";
+      currentQuestion.correct =
+        answer.toLowerCase() === currentQuestion.correctAnswer.toLowerCase();
+      currentQuestion.userAnswer = answer;
+      break;
+
+    default:
+      currentQuestion.correct = false;
+      break;
   }
-  questions[currentQuestion].userAnswer = answer;
-  if (answer === questions[currentQuestion].correctAnswer.toLowerCase()) {
+
+  if (currentQuestion.correct) {
     score++;
-    console.log("Correct!");
-  } else {
-    console.log("Incorrect!");
   }
 }
 
 function displayScore() {
   hidePreviousQuestion(questions.length);
-  let scoreContainer = document.getElementById("result-container");
+  const scoreContainer = document.getElementById("result-container");
   scoreContainer.style.display = "flex";
-  let scoreText = document.getElementById("result");
+  const scoreText = document.getElementById("result");
   const scoreToDisplay = score * 2 + "/10 Points";
   scoreText.innerHTML = "Result: " + scoreToDisplay;
   buildResultsTable();
 }
 
 function buildResultsTable() {
-  let table = document.getElementById("results-table");
   for (let i = 1; i <= questions.length; i++) {
     const questionCell = document.getElementById("question" + i);
-    const userAnswerCell = document.getElementById("your-answer" + i);
+    const userAnswerCell = document.getElementById("user-answer" + i);
     const correctAnswerCell = document.getElementById("correct-answer" + i);
-
-    const question = questions[i].question;
-    const userAnswer = questions[i].userAnswer;
-    const correctAnswer = questions[i].correctAnswer;
-
-    if (!userAnswer) {
-      userAnswer = "Skipped";
-    }
-
+    const question = questions[i - 1].question;
+    const userAnswer = questions[i - 1].userAnswer;
+    const correctAnswer = questions[i - 1].correctAnswer;
     questionCell.innerHTML = question;
     userAnswerCell.innerHTML = userAnswer;
     correctAnswerCell.innerHTML = correctAnswer;
 
-    if (userAnswer === correctAnswer.toLowerCase()) {
+    if (userAnswer === questions[i - 1].correctAnswer) {
       userAnswerCell.style.color = "#3c896d";
     } else {
       userAnswerCell.style.color = "#bf2239";
@@ -167,7 +192,18 @@ function buildResultsTable() {
   }
 }
 
+function skipQuestion() {
+  currentQuestion++;
+  questions[currentQuestion].userAnswer = "Skipped";
+  questions[currentQuestion].correct = false;
+  displayQuestion(currentQuestion);
+}
+
 function checkRadioButton(answerNumber) {
   let radioButton = document.getElementById("answer" + answerNumber);
   radioButton.checked = true;
+}
+
+function restartQuiz() {
+  window.location.reload();
 }
