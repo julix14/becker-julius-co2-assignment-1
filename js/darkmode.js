@@ -5,7 +5,6 @@ function setStyles() {
     document.getElementById("theme").href = "css/lightmode.css";
   }
 }
-
 function enableButton() {
   const checkbox = document.getElementById("darkmode-toggle");
   if (localStorage.getItem("darkmode") == "true") {
