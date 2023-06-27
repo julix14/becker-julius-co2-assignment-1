@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/darkmodeToggle.css" />
-    <link rel="stylesheet" id="light-theme" href="css/lightmode.css" />
+    <link rel="stylesheet" id="theme" href="css/lightmode.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700"
@@ -15,8 +15,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
+    <script src="js/darkmode.js"></script>
   </head>
-  <body>
+  <body onload="enableButton()">
     <header>
       <a href="index.html" class="material-symbols-outlined home-button"
         >home</a
