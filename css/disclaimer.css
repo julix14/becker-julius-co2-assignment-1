@@ -14,19 +14,9 @@ th.col2 {
 
 table,
 th {
-  border: 1px solid black;
   border-collapse: collapse;
 }
 
-table td + td {
-  border-left: 1px solid black;
-}
-
-table tr:nth-of-type(odd) {
-  background-color: #ebeae8;
-}
-
 a {
-  color: #171a21;
   text-decoration: underline;
 }

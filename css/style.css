@@ -1,7 +1,6 @@
 body {
   font-family: "Space Mono", monospace, sans-serif;
-  background-color: #fcfaf9;
-  color: #171a21;
+
   padding-left: 2rem;
   padding-right: 2rem;
   display: flex;
@@ -30,7 +29,6 @@ footer {
 }
 
 footer a {
-  color: #171a21;
   text-decoration: underline;
 }
 
@@ -56,7 +54,6 @@ a {
 .home-button {
   grid-area: home;
   justify-self: center;
-  color: #171a21;
   text-decoration: none;
 }
 
