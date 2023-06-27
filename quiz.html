@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
   </head>
-  <body onload="displayQuestion(0)">
+  <body onload="displayQuestion(4)">
     <header>
       <a href="index.html" class="material-symbols-outlined home-button"
         >home</a
@@ -88,9 +88,13 @@
       </div>
       <div class="question" id="ft-question-container">
         <h2 id="ft-question">Question:</h2>
-        <div>
-          <label for="ft-answer">Answer:</label>
-          <input id="ft-answer" name="text-field" type="text" />
+        <div id="ft-answer-container">
+          <input
+            id="ft-answer"
+            name="text-field"
+            type="text"
+            placeholder="Your answer"
+          />
         </div>
         <div class="button-container">
           <button onclick="skipQuestion()" class="next-question">Skip</button>
@@ -99,7 +103,13 @@
       </div>
       <div class="question" id="result-container">
         <h2 id="result">Result:</h2>
-        <div id="result-text"></div>
+        <table>
+          <tr>
+            <th>Question</th>
+            <th>Your answer</th>
+            <th>Correct answer</th>
+          </tr>
+        </table>
         <button onclick="restartQuiz()" class="next-question">Restart</button>
       </div>
     </main>

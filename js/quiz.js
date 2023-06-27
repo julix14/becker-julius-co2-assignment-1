@@ -63,7 +63,7 @@ const questions = [
 ];
 
 let score = 0;
-let currentQuestion = 0;
+let currentQuestion = 4;
 
 function getContainerAndQuestion(questionNumber) {
   let questionContainer;
@@ -134,8 +134,33 @@ function displayScore() {
   hidePreviousQuestion(questions.length);
   let scoreContainer = document.getElementById("result-container");
   scoreContainer.style.display = "flex";
-  let scoreText = document.getElementById("result-text");
-  scoreText.innerHTML = score * 2 + "/10 Points";
+  let scoreText = document.getElementById("result");
+  const scoreToDisplay = score * 2 + "/10 Points";
+  scoreText.innerHTML = "Result: " + scoreToDisplay;
+  buildResultsTable();
+}
+
+function buildResultsTable() {
+  let table = document.getElementById("results-table");
+  for (let i = 1; i <= questions.length; i++) {
+    const questionCell = document.getElementById("question" + i);
+    const userAnswerCell = document.getElementById("your-answer" + i);
+    const correctAnswerCell = document.getElementById("correct-answer" + i);
+
+    const question = questions[i].question;
+    const userAnswer = questions[i].userAnswer;
+    const correctAnswer = questions[i].correctAnswer;
+
+    questionCell.innerHTML = question;
+    userAnswerCell.innerHTML = userAnswer;
+    correctAnswerCell.innerHTML = correctAnswer;
+
+    if (userAnswer === correctAnswer.toLowerCase()) {
+      userAnswerCell.style.color = "#3c896d";
+    } else {
+      userAnswerCell.style.color = "#bf2239";
+    }
+  }
 }
 
 function checkRadioButton(answerNumber) {
