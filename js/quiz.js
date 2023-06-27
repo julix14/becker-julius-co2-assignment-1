@@ -151,6 +151,10 @@ function buildResultsTable() {
     const userAnswer = questions[i].userAnswer;
     const correctAnswer = questions[i].correctAnswer;
 
+    if (!userAnswer) {
+      userAnswer = "Skipped";
+    }
+
     questionCell.innerHTML = question;
     userAnswerCell.innerHTML = userAnswer;
     correctAnswerCell.innerHTML = correctAnswer;
