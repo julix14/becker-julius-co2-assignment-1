@@ -136,7 +136,7 @@
 
 body .carousel .middle-border {
   background-color: #eee;
-  height: 75%;
+  height: 88%;
   flex-grow: 1;
   max-width: 2px;
   z-index: 0;
@@ -161,9 +161,12 @@ body .carousel .right-zone {
 .list-headline {
   text-align: center;
   font-weight: 700;
-  margin-top: 2rem;
   text-decoration: underline;
   font-size: 1.2rem;
+}
+
+#headline-usecase {
+  margin-top: 2rem;
 }
 
 /* Actions Buttons */
