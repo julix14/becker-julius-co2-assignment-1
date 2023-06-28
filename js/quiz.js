@@ -221,3 +221,7 @@ function checkRadioButton(answerNumber) {
 function restartQuiz() {
   window.location.reload();
 }
+
+function showEmailField() {
+  document.getElementById("email").style.display = "block";
+}

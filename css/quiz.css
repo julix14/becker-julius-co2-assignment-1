@@ -141,3 +141,9 @@ th {
 table tr:nth-of-type(odd) {
   background-color: #ebeae8;
 }
+
+#email {
+  margin: 2rem 0 2rem 0;
+  width: 50%;
+  display: none;
+}
