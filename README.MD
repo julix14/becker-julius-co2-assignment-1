@@ -50,7 +50,7 @@ to validate their knowledge in this domain after reading your content.
 
 # Disclaimer about the content of this Website
 
-<a href="disclaimer.html">Disclaimer </a>
+<a href="https://julix14.github.io/becker-julius-co2-assignment-1/disclaimer.html">Disclaimer </a>
 
 # Color palette
 
