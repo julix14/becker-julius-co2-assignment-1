@@ -1,3 +1,4 @@
+let skippedAll = true;
 const questions = [
   {
     question: "AI automation can lead to job displacement?",
@@ -50,6 +51,7 @@ let score = 0;
 let currentQuestion = 0;
 
 function nextQuestion() {
+  skippedAll = false;
   checkAnswer(currentQuestion);
   try {
     if (questions[currentQuestion].questionType === "multipleChoice") {
@@ -164,6 +166,14 @@ function checkAnswer(questionNumber) {
 
 function displayScore() {
   hidePreviousQuestion(questions.length);
+  if (skippedAll) {
+    document.getElementById("result-table").hidden = true;
+    const scoreContainer = document.getElementById("result-container");
+    scoreContainer.style.display = "flex";
+    const scoreText = document.getElementById("result");
+    scoreText.innerHTML = "You skipped every question! Try Again!";
+    return;
+  }
   const scoreContainer = document.getElementById("result-container");
   scoreContainer.style.display = "flex";
   const scoreText = document.getElementById("result");
@@ -193,10 +203,14 @@ function buildResultsTable() {
 }
 
 function skipQuestion() {
-  currentQuestion++;
   questions[currentQuestion].userAnswer = "Skipped";
   questions[currentQuestion].correct = false;
-  displayQuestion(currentQuestion);
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    displayQuestion(currentQuestion);
+  } else {
+    displayScore();
+  }
 }
 
 function checkRadioButton(answerNumber) {
