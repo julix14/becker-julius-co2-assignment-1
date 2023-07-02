@@ -14,6 +14,7 @@ concurrency: preview-${{ github.ref }}
 jobs:
   deploy-preview:
     runs-on: ubuntu-20.04
+    environment: MR
     steps:
       - name: Checkout
         uses: actions/checkout@v3
