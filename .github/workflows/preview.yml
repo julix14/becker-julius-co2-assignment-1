@@ -3,8 +3,9 @@ name: Deploy PR previews
 
 on:
   pull_request:
-    branches: ["feature/*"]
-    types:
+    branches:
+      - feature/*
+      types:
       - opened
       - reopened
       - synchronize
