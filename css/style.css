@@ -66,3 +66,55 @@ button,
 input {
   font-family: "Space Mono", monospace, sans-serif;
 }
+
+/* Actions Buttons */
+#actions {
+  height: 480px;
+  width: 1000px;
+  margin: auto;
+  padding-top: 20px;
+}
+#actions-card {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  height: 260px;
+  transition: 0.35s;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.action-button span {
+  margin-top: -20px;
+  z-index: -15;
+  transition: 0.35s;
+  text-align: center;
+  color: #fcfaf9;
+  font-size: larger;
+}
+.action-button svg {
+  fill: #fcfaf9;
+  width: 250px;
+  height: 250px;
+}
+
+.action-button:hover span {
+  margin-top: 10px;
+  transition: 0.35s;
+  z-index: 10;
+}
+
+.action-button:hover {
+  height: 300px;
+  transition: 0.3s;
+}
+
+#actions h2 {
+  text-align: center;
+}

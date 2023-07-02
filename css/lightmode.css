@@ -55,6 +55,16 @@ body .carousel .right-zone {
   background-color: #3c896d;
 }
 
+#home,
+#home span {
+  background-color: #fff;
+  color: #171a21;
+}
+
+#home_icon {
+  fill: #171a21;
+}
+
 #risks {
   background-color: #bf2239;
 }

@@ -55,6 +55,21 @@ body .carousel .middle-border {
 body .carousel .right-zone {
   background: #16181f;
 }
+
+#home {
+  border: black 2px solid;
+}
+
+#home,
+#home span {
+  background-color: #16181f;
+  color: #fcfaf9;
+}
+
+#home_icon {
+  fill: #fcfaf9;
+}
+
 #benefits {
   background-color: #32715a;
 }
